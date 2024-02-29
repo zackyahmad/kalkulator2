@@ -26,12 +26,21 @@ class Calculator{
 
   samadengan(){
     try {
-      const result = eval(this.display);
+      const result = this.safeEval(this.display);
       this.display = result;
       this.updateDisplay();
     } catch (error) {
       this.display = 'Error';
       this.updateDisplay();
+    }
+  }
+
+  safeEval(expression) {
+    // Validasi ekspresi sebelum dievaluasi
+    if (/^[0-9+\-*/.() ]+$/.test(expression)) {
+      return Function(`'use strict'; return (${expression})`)();
+    } else {
+      throw new Error('Invalid expression');
     }
   }
 }

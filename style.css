@@ -1,0 +1,98 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+:root{
+    --pink-color: #eb92be;
+    --kuning--color: #ffef78;
+    --hijau--color: #63c9b4 ;
+    --bgbutton-color: #d72880;
+}
+*{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+body{
+    background: linear-gradient(320deg, var(--pink-color), var(--kuning--color), var(--hijau--color) );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    font-family: 'dosis', sans-serif;
+
+}
+
+.wraper{
+    flex-basis: 400px;
+    height: 540px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.75);
+    color: #232323;
+    font-size: 35px;
+    padding: 20px 35px;
+}
+
+input{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 16px;
+    padding: 10px;
+    text-align: right;
+    font-size: 35px;
+}
+
+.calc-button-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+.calc-button{
+    background: rgba(255, 255, 255, 0.75);
+    flex-basis: 20%;
+    border-radius: 16PX;
+    height: 65px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.calc-button:last-child{
+    color: #ffff;
+    background: var(--bgbutton-color);
+}
+
+.calc-button:last-child:hover{
+    background: inherit;
+    color: inherit;
+}
+
+.calc-button:hover{
+    background-color: inherit;
+}
+
+.calc-button:active{
+    background-color: var(--kuning--color);
+}
+
+.double{
+    flex-basis: 45%;
+}
+.triple{
+    flex-basis: 73%;
+}
